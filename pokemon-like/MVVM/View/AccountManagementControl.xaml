@@ -6,7 +6,7 @@
         <TextBlock Text="User Information" FontWeight="Bold" Margin="20,20,0,5"/>
         <TextBlock x:Name="UsernameTextBlock" Margin="0,5" />
         <TextBlock x:Name="UserEmailTextBlock" Margin="0,5" />
-        <Button Content="Log Out" Click="LogOut_Click" Margin="5,5,0,10" />
-        <Button Content="Delete Account" Click="DeleteAccount_Click" Margin="5,5,0,10" />
+        <Button Content="Log Out" Click="LogOut_Click" Margin="5,5,0,10" Style="{StaticResource PokemonButtonStyle}" Width="128"/>
+        <Button Content="Delete Account" Click="DeleteAccount_Click" Margin="5,5,0,10" Style="{StaticResource PokemonButtonStyle}" Width="128"/>
     </StackPanel>
 </UserControl>

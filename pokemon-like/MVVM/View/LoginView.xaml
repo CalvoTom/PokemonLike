@@ -15,7 +15,7 @@
         <TextBlock Grid.Row="0" Text="Login" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
         <TextBox Grid.Row="1" x:Name="UsernameTextBox" VerticalAlignment="Center" Margin="10" />
         <PasswordBox Grid.Row="2" x:Name="PasswordBox" VerticalAlignment="Center" Margin="10" />
-        <Button Grid.Row="3" Content="Login" Width="63" HorizontalAlignment="Center" Click="LoginButton_Click" Margin="0,0,0,54" />
-        <Button Grid.Row="3" Content="Signup" Width="63" HorizontalAlignment="Center" Click="SignupButton_Click" Margin="0,29,0,24" />
+        <Button Grid.Row="3" Content="Login"  HorizontalAlignment="Center" Click="LoginButton_Click" Margin="0,0,0,54" Style="{StaticResource PokemonButtonStyle}" Width="128" />
+        <Button Grid.Row="3" Content="Signup"  HorizontalAlignment="Center" Click="SignupButton_Click" Margin="0,29,0,24" Style="{StaticResource PokemonButtonStyle}" Width="128" />
     </Grid>
 </Window>

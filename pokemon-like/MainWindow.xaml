@@ -7,8 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Connect DB" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ConnectButton_Click" Margin="0,200,0,0" Style="{StaticResource PokemonButtonStyle}"/>
-        <Button Content="Login" HorizontalAlignment="Center" VerticalAlignment="Top" Click="LoginButton_Click" Margin="0,230,0,0" Style="{StaticResource PokemonButtonStyle}"/>
-        <Button Content="Signup" HorizontalAlignment="Center" VerticalAlignment="Top" Click="SignupButton_Click" Margin="0,260,0,0" Style="{StaticResource PokemonButtonStyle}"/>
+        <TextBlock Text="Pokémoins" FontFamily="pack://application:,,,/Fonts/#Pokemon Solid" FontSize="64" Foreground="#FFCB05" HorizontalAlignment="Center" TextAlignment="Center" Margin="0,72,0,-72">
+            <TextBlock.Effect>
+                <DropShadowEffect ShadowDepth="5" 
+                                  Color="#29669E" 
+                                  BlurRadius="0" 
+                                  Opacity="1" />
+            </TextBlock.Effect>
+        </TextBlock>
+        <Button Name="settings" Width="30" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Click="ConnectButton_Click" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Margin="0,20,20,0">
+            <Button.Content>
+                <Image Source="images/settings-cog.png" Width="28" Height="29" RenderTransformOrigin="-0.518,1.45"/>
+            </Button.Content>
+        </Button>
+        <Button Content="Login" HorizontalAlignment="Center" VerticalAlignment="Top" Click="LoginButton_Click" Margin="0,230,0,0" Style="{StaticResource PokemonButtonStyle}" Width="128"/>
+        <Button Content="Signup" HorizontalAlignment="Center" VerticalAlignment="Top" Click="SignupButton_Click" Margin="0,260,0,0" Style="{StaticResource PokemonButtonStyle}" Width="128"/>
     </Grid>
 </Window>
