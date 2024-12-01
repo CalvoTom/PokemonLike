@@ -1,0 +1,18 @@
+<Window x:Class="PokemonLike.Views.MonsterManagementView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:PokemonLike.Views"
+        Title="Monster Management" Height="500" Width="800">
+    
+    <Grid Margin="10">
+        <TabControl>
+            <TabItem Header="Monsters">
+                <local:MonsterManagementControl/>
+            </TabItem>
+
+            <TabItem Header="Account">
+                <local:AccountManagementControl/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
