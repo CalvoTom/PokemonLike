@@ -9,6 +9,10 @@
             <TabItem Header="Monsters">
                 <local:MonsterManagementControl/>
             </TabItem>
+            
+            <TabItem Header="Spells">
+                <local:SpellsManagementControl/>
+            </TabItem>
 
             <TabItem Header="Account">
                 <local:AccountManagementControl/>

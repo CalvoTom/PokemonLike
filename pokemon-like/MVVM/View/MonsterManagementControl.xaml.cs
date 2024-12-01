@@ -80,7 +80,6 @@ namespace PokemonLike.Views
             {
                 MessageBox.Show($"You have chosen {selectedMonster.Name}!", "Monster Selected", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                // Redirect to the battle application window
                 var battleView = new BattleView(selectedMonster);
                 battleView.Show();
                 var parentWindow = Window.GetWindow(this);
@@ -94,12 +93,9 @@ namespace PokemonLike.Views
 
         private void SpellListBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-            // Si un sort a été sélectionné dans la liste
             if (SpellListBox.SelectedItem is Spell selectedSpell)
             {
-
-                // Tu peux ici ouvrir une fenêtre popup ou une nouvelle vue qui affiche les détails du sort
-                var spellView = new SpellView(selectedSpell); // Tu devras créer cette vue SpellView
+                var spellView = new SpellView(selectedSpell); 
                 spellView.Show();
             }
         }

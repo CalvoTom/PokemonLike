@@ -2,6 +2,7 @@ using System.Windows;
 using PokemonLike.Services;
 using PokemonLike.Properties;
 using pokemon_like;
+using PokemonLike.Models;
 
 namespace PokemonLike.Views
 {
@@ -12,13 +13,18 @@ namespace PokemonLike.Views
             InitializeComponent();
         }
 
+        private void SignupButton_Click(object sender, RoutedEventArgs e)
+        {
+            var signupView = new SignupView();
+            signupView.Show(); 
+            this.Close(); 
+        }
+
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             var username = UsernameTextBox.Text;
             var password = PasswordBox.Password;
-
-            var passwordHash = password; 
-
+            var passwordHash = PasswordHasher.HashPassword(password);
 
             var user = DatabaseService.GetUser(username);
 

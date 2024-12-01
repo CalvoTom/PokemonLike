@@ -1,4 +1,3 @@
-
 namespace PokemonLike.Models
 {
     public class Login

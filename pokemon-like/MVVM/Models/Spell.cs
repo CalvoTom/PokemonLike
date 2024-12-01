@@ -1,4 +1,3 @@
-// Models/Spell.cs
 namespace PokemonLike.Models
 {
     public class Spell

@@ -11,7 +11,7 @@
         </Grid.RowDefinitions>
 
         <!-- Points Counter -->
-        <TextBlock x:Name="PointsCounter" Grid.Row="0" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,10" Width="0" />
+        <TextBlock x:Name="PointsCounter" Grid.Row="0" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,10" Width="100" />
 
         <!-- Monster Stats -->
         <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="10,10,10,10">

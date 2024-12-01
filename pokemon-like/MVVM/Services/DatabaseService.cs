@@ -13,7 +13,6 @@ namespace PokemonLike.Services
 
         private string _connectionString;
 
-        // Constructeur qui prend la chaîne de connexion
         public DatabaseContext(string connectionString)
         {
             if (string.IsNullOrEmpty(connectionString))
@@ -33,8 +32,6 @@ namespace PokemonLike.Services
     public static class DatabaseService
     {
         private static string _connectionString;
-
-        // Initialisation de la chaîne de connexion
         public static void Initialize(string connectionString)
         {
             if (string.IsNullOrEmpty(connectionString))
@@ -56,7 +53,6 @@ namespace PokemonLike.Services
         }
 
 
-        // Ajouter un utilisateur
         public static void AddUser(string username, string passwordHash)
         {
             if (string.IsNullOrEmpty(_connectionString))
@@ -69,7 +65,6 @@ namespace PokemonLike.Services
             context.SaveChanges();
         }
 
-        // Récupérer un utilisateur par son nom d'utilisateur
         public static Login GetUser(string username)
         {
             if (string.IsNullOrEmpty(_connectionString))
@@ -81,7 +76,6 @@ namespace PokemonLike.Services
              return context.Login.FirstOrDefault(u => u.Username == username);
         }
 
-        // Supprimer un utilisateur
         public static void DeleteUser(string username)
         {
             if (string.IsNullOrEmpty(_connectionString))

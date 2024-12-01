@@ -12,9 +12,6 @@ using PokemonLike.Views;
 
 namespace pokemon_like
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -24,16 +21,21 @@ namespace pokemon_like
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            // Ouvre la fenêtre LoginView
             var loginView = new LoginView();
-            loginView.Show(); // Affiche la fenêtre LoginView
-            this.Close(); // Ferme la fenêtre principale
+            loginView.Show(); 
+            this.Close(); 
+        }
+
+        private void SignupButton_Click(object sender, RoutedEventArgs e)
+        {
+            var signupView = new SignupView();
+            signupView.Show(); 
+            this.Close(); 
         }
         private void ConnectButton_Click(object sender, RoutedEventArgs e)
         {
-            // Ouvre la fenêtre LoginView
             var connectView = new SettingsView();
-            connectView.Show(); // Affiche la fenêtre LoginView
+            connectView.Show(); 
         }
     }
 }

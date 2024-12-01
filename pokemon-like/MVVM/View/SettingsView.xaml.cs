@@ -30,8 +30,6 @@ namespace PokemonLike.Views
         private void SaveSettings_Click(object sender, RoutedEventArgs e)
         {
             var connectionString = ConnectionStringTextBox.Text;
-
-            // Save the connection string (you could save this in a config file or database)
             Properties.Settings.Default.ConnectionString = connectionString;
             Properties.Settings.Default.Save();
             DatabaseService.Initialize(connectionString);

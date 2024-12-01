@@ -44,7 +44,7 @@ namespace PokemonLike.Views
             Properties.Settings.Default.Save();
             MessageBox.Show("You have been logged out.", "Log Out", MessageBoxButton.OK, MessageBoxImage.Information);
 
-            var loginPage = new LoginView(); // Replace with the actual login page
+            var loginPage = new LoginView();
             loginPage.Show();
             var parentWindow = Window.GetWindow(this);
             parentWindow.Close();
@@ -64,7 +64,7 @@ namespace PokemonLike.Views
                     Properties.Settings.Default.Save();
 
                     MessageBox.Show("Your account has been deleted.", "Account Deleted", MessageBoxButton.OK, MessageBoxImage.Information);
-                    var loginPage = new LoginView(); // Replace with the actual login page
+                    var loginPage = new LoginView();
                     loginPage.Show();
                     var parentWindow = Window.GetWindow(this);
                     parentWindow.Close();
