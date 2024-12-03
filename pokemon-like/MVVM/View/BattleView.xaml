@@ -1,7 +1,7 @@
 <Window x:Class="PokemonLike.Views.BattleView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Battle" Height="450" Width="800">
+        Title="Battle" Height="550" Width="800">
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -19,16 +19,16 @@
             <StackPanel Margin="10" Width="350">
                 <TextBlock Text="Player's Monster" FontWeight="Bold" HorizontalAlignment="Center" />
                 <TextBlock x:Name="PlayerMonsterName" HorizontalAlignment="Center" />
-                <Image x:Name="PlayerMonsterImage" Width="350" Height="190" HorizontalAlignment="Center" />
-                <ProgressBar x:Name="PlayerHpBar" Height="20" Maximum="100" Margin="0,10" />
+                <Image x:Name="PlayerMonsterImage" Width="350" Height="190" HorizontalAlignment="Center" Margin="0,10,0,10" />
+                <ProgressBar x:Name="PlayerHpBar" Height="10" Width="300" Maximum="100" Margin="0,10,0,0" HorizontalAlignment="Center" />
             </StackPanel>
 
             <!-- Enemy Monster -->
             <StackPanel Margin="10" Width="350">
                 <TextBlock Text="Enemy Monster" FontWeight="Bold" HorizontalAlignment="Center" />
                 <TextBlock x:Name="EnemyMonsterName" HorizontalAlignment="Center" />
-                <Image x:Name="EnemyMonsterImage" Width="350" Height="190" HorizontalAlignment="Center" />
-                <ProgressBar x:Name="EnemyHpBar" Height="20" Maximum="100" Margin="0,10" />
+                <Image x:Name="EnemyMonsterImage" Width="350" Height="190" HorizontalAlignment="Center" Margin="0,10,0,10" />
+                <ProgressBar x:Name="EnemyHpBar" Height="10" Width="300" Maximum="100" Margin="0,10,0,0" HorizontalAlignment="Center" />
             </StackPanel>
         </StackPanel>
 

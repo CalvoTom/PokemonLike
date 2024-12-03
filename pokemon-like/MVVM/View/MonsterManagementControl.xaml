@@ -14,7 +14,7 @@
                  Grid.Column="0" Margin="10" />
 
         <!-- Monster Details -->
-        <StackPanel Grid.Column="1" Margin="10">
+        <StackPanel Grid.Column="1" Margin="10" VerticalAlignment="Top" MaxHeight="500">
             <Image x:Name="MonsterImage" Height="150" Margin="0,0,0,10" />
             <TextBlock Text="Name:" FontWeight="Bold" />
             <TextBlock x:Name="MonsterName" Margin="0,0,0,10" />
@@ -22,7 +22,7 @@
             <TextBlock x:Name="MonsterHealth" Margin="0,0,0,10" />
             <TextBlock Text="Spells:" FontWeight="Bold" />
             <ListBox x:Name="SpellListBox" DisplayMemberPath="Name" Margin="0,0,0,10" SelectionChanged="SpellListBox_SelectionChanged" />
-            <Button Content="Choose Monster" Click="ChooseMonster_Click" Style="{StaticResource PokemonButtonStyle}" Width="128"/>
+            <Button Content="Choose Monster" Click="ChooseMonster_Click" Style="{StaticResource PokemonButtonStyle}" Width="128" />
         </StackPanel>
     </Grid>
 </UserControl>
