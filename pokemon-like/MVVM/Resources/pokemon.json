@@ -200,7 +200,7 @@
             {
                 "Id": 25,
                 "Name": "Sing",
-                "Damage": 0,
+                "Damage": 10,
                 "Description": "Puts the opponent to sleep"
             },
             {
@@ -238,7 +238,7 @@
             {
                 "Id": 30,
                 "Name": "Rest",
-                "Damage": 0,
+                "Damage": 10,
                 "Description": "Recovers health by sleeping"
             },
             {
@@ -320,4 +320,3 @@
         ]
     }
 ]
-

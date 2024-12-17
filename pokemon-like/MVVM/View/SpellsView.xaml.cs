@@ -9,7 +9,6 @@ namespace PokemonLike.Views
         {
             InitializeComponent();
 
-            // Afficher les détails du sort
             SpellName.Text = spell.Name;
             SpellDamage.Text = spell.Damage.ToString(); ;
             SpellDescription.Text = spell.Description;
@@ -17,7 +16,7 @@ namespace PokemonLike.Views
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();  // Fermer la fenêtre popup
+            this.Close();  
         }
     }
 }

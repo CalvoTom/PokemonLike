@@ -11,7 +11,8 @@ namespace PokemonLike.Views
     {
         private Monster playerMonster;
         private Monster enemyMonster;
-        private int playerPoints = 0;  
+        private int playerPoints = 0;
+        private double enemyDamageMultiplier = 1.0; // Multiplicateur de dégâts ennemis
 
         public BattleView(Monster selectedMonster)
         {
@@ -46,13 +47,17 @@ namespace PokemonLike.Views
             UpdatePointsCounter();
         }
 
-
         private void GenerateEnemyMonster()
         {
             var allMonsters = JsonService.LoadMonsters();
             var random = new Random();
             enemyMonster = allMonsters[random.Next(allMonsters.Count)];
-            enemyMonster.Health = (int)(enemyMonster.Health * 1.1); 
+            enemyMonster.Health = (int)(enemyMonster.Health * 1.1);
+
+            foreach (var spell in enemyMonster.Spells)
+            {
+                spell.Damage = (int)(spell.Damage * enemyDamageMultiplier);
+            }
 
             EnemyMonsterName.Text = enemyMonster.Name;
             EnemyHpBar.Maximum = enemyMonster.Health;
@@ -65,7 +70,7 @@ namespace PokemonLike.Views
                 bitmap.UriSource = new System.Uri(enemyMonster.ImageUrl, System.UriKind.Absolute);
                 bitmap.CacheOption = System.Windows.Media.Imaging.BitmapCacheOption.OnLoad;
                 bitmap.EndInit();
-                EnemyMonsterImage.Source = bitmap; 
+                EnemyMonsterImage.Source = bitmap;
             }
             catch (Exception ex)
             {
@@ -98,17 +103,19 @@ namespace PokemonLike.Views
                     if (enemyMonster.Health == 0)
                     {
                         MessageBox.Show("Enemy defeated!", "Victory", MessageBoxButton.OK, MessageBoxImage.Information);
-                        playerPoints++;  
+                        playerPoints++;
                         UpdatePointsCounter();
+
+                        enemyDamageMultiplier += 0.05;
 
                         SpellListBox.IsEnabled = true;
                         UseSpellButton.IsEnabled = true;
                         NewEnemyButton.IsEnabled = true;
 
-                        return;  
+                        return;
                     }
 
-                    await Task.Delay(1500); 
+                    await Task.Delay(1500);
 
                     var random = new Random();
                     var enemySpell = enemyMonster.Spells[random.Next(enemyMonster.Spells.Count)];
@@ -135,12 +142,12 @@ namespace PokemonLike.Views
             UseSpellButton.IsEnabled = true;
         }
 
-
         private void NewEnemy_Click(object sender, RoutedEventArgs e)
         {
             GenerateEnemyMonster();
             NewEnemyButton.IsEnabled = false;
         }
+
         private void UpdatePointsCounter()
         {
             PointsCounter.Text = $"Points: {playerPoints}";
