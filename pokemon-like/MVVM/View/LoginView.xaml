@@ -13,8 +13,10 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Text="Login" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
-        <TextBox Grid.Row="1" x:Name="UsernameTextBox" VerticalAlignment="Center" Margin="10" />
-        <PasswordBox Grid.Row="2" x:Name="PasswordBox" VerticalAlignment="Center" Margin="10" />
+        <TextBlock Grid.Row="0" Text="Username:" VerticalAlignment="Top" Margin="10,89,10,0" Height="16" Grid.RowSpan="2" />
+        <TextBox Grid.Row="1" x:Name="UsernameTextBox" VerticalAlignment="Center" Margin="10,10,10,0" />
+        <TextBlock Grid.Row="1" Text="Password:" VerticalAlignment="Top" Margin="10,89,10,0" Height="16" Grid.RowSpan="2" />
+        <PasswordBox Grid.Row="2" x:Name="PasswordBox" VerticalAlignment="Center" Margin="10,10,10,0" />
         <Button Grid.Row="3" Content="Login"  HorizontalAlignment="Center" Click="LoginButton_Click" Margin="0,0,0,54" Style="{StaticResource PokemonButtonStyle}" Width="128" />
         <Button Grid.Row="3" Content="Signup"  HorizontalAlignment="Center" Click="SignupButton_Click" Margin="0,29,0,24" Style="{StaticResource PokemonButtonStyle}" Width="128" />
     </Grid>
